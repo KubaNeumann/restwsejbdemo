@@ -18,8 +18,8 @@ public class PersonManager {
 	}
 
 	public void deletePerson(Person person){
-		
-	}
+		db.remove(person);
+ 	}
 	
 	public Person getPerson(Integer id) {
 		return new Person("Bolek", 1976);
@@ -27,6 +27,10 @@ public class PersonManager {
 	
 	public List<Person> getAllPersons(){
 		return db;
+	}
+	
+	public void deleteAllPersons(){
+		db.clear();
 	}
 
 }

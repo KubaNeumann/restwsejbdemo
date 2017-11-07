@@ -55,6 +55,7 @@ public class PersonRESTService {
 
 	@DELETE
 	public Response clearPersons() {
+		pm.deleteAllPersons();
 		return Response.status(200).build();
 	}
 
